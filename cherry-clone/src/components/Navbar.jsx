@@ -1,35 +1,36 @@
 import React from 'react';
 import logo from "../assets/logo.svg"
-const Navbar = () => {
+
+const Navbar = (props) => {
   return (
-    <div>
-         <section class="navbar">
-        <div class="container">
-            <img class="logo" src={logo}/>
-            <div class="location">
-                <span class="city"> Pune</span>
-                <span class="state">Maharashtra, India</span>
+    
+         <section className="navbar">
+        <div className="container">
+            <img className="logo" src={logo}/>
+            <div className="location">
+                <span className="city">{props.city}</span>
+                <span className="state">{props.state},{props.country}</span>
             </div>
-            <div class="navbar-options">
-                <div class="navbar-option">
-                    <span class="material-icons"> person_outline</span> Sign In
+            <div className="navbar-options">
+                <div className="navbar-option">
+                    <span className="material-icons"> person_outline</span> Sign In
                 </div>
-                <div class="navbar-option">
-                    <span class="material-icons">
+                <div className="navbar-option">
+                    <span className="material-icons">
                         shopping_bag
                         </span> Cart
                 </div>
-                <div class="navbar-option">
-                    <span class="material-icons">support</span> Help
+                <div className="navbar-option">
+                    <span className="material-icons">support</span> Help
                 </div>
-                <div class="navbar-option">
-                    <span class="material-icons">search</span> Search
+                <div className="navbar-option">
+                    <span className="material-icons">search</span> Search
                 </div>
             </div>
         </div>
         
     </section>
-    </div>
+    
   )
 }
 

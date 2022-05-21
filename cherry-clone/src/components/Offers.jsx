@@ -1,8 +1,15 @@
 import React from 'react'
 
-const Offers = () => {
+const Offers = (props) => {
   return (
-    <div>Offers</div>
+
+    <section className="offers">
+        <div className="container">
+        {props.offers.map(ele=>
+           <img key={ele.id} className="offer" src={ele}/>
+        )}   
+        </div>
+    </section>
   )
 }
 
